@@ -1,0 +1,1 @@
+# gradle-gitrepo-dependencies-test
