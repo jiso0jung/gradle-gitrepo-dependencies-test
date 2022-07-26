@@ -2,7 +2,20 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.6.20"
+    `maven-publish`
     application
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "org.jisoo"
+            artifactId = "gradle-gitrepo-dependencies-test"
+            version = "1.0"
+
+            from(components["java"])
+        }
+    }
 }
 
 group = "org.jisoo"
